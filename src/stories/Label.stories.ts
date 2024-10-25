@@ -13,6 +13,11 @@ const meta = {
       control: {
         type: 'inline-radio',
       }
+    },
+    color: {
+      control: {
+        type: 'color',
+      }
     }
   }
 } satisfies Meta<typeof Label>
@@ -25,6 +30,7 @@ export const Basic: Story = {
   args: {
     label: 'Label',
     size: 'normal',
+    allCaps: false
   }
 }
 
@@ -40,7 +46,8 @@ export const Secondary: Story = {
   args: {
     label: 'Secondary label',
     size: 'h2',
-    color: "text-primary"
+    color: "text-primary",
+    allCaps: false
   }
 }
 
@@ -48,6 +55,7 @@ export const CustomColor: Story = {
   args: {
     label: 'Custom Color label',
     size: 'h3',
-    fontColor: '#00ff00'
+    fontColor: '#00ff00',
+    allCaps: false
   }
 }
