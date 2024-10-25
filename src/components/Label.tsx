@@ -25,16 +25,22 @@ interface Props {
    * Font color 
    */
   fontColor?: string
+
+  /**
+   * Background color
+   */
+  backgroundColor?: string
 }
 
 export const Label = ({
-  label, size = 'normal', allCaps = false, color, fontColor
+  label, size = 'normal', allCaps = false, color, fontColor, backgroundColor = 'transparent'
 }: Props) => {
   return (
     <span
       className={`label ${size} ${color || ''}`}
       style={{
-        color: fontColor
+        color: fontColor,
+        backgroundColor
       }}
     >
       {

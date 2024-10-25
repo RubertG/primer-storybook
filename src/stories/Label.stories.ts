@@ -14,7 +14,12 @@ const meta = {
         type: 'inline-radio',
       }
     },
-    color: {
+    fontColor: {
+      control: {
+        type: 'color',
+      }
+    },
+    backgroundColor: {
       control: {
         type: 'color',
       }
@@ -57,5 +62,14 @@ export const CustomColor: Story = {
     size: 'h3',
     fontColor: '#00ff00',
     allCaps: false
+  }
+}
+
+export const CustomBackgroundColor: Story = {
+  args: {
+    label: 'Custom Color label',
+    size: 'h3',
+    allCaps: false,
+    backgroundColor: '#a6c8ff'
   }
 }
