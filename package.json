@@ -1,11 +1,34 @@
 {
-  "name": "storybook",
+  "name": "rg-custom-components",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+
+  "keywords": [
+    "react", "reactjs", "storybook", "ui", "components", "typescript", "dev", "rubert"
+  ],
+  "license": "MIT",
+  "homepage": "https://671bc310e7db9857e352ca8e-swpcduxgoj.chromatic.com/",
+  "repository": {
+    "url": "https://github.com/RubertG/primer-storybook",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+
   "scripts": {
     "dev": "npm run storybook",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -13,10 +36,10 @@
     "chromatic": "npx chromatic --project-token=chpt_f80ab9050ca33c6"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "@chromatic-com/storybook": "^1.9.0",
     "@eslint/js": "^9.13.0",
     "@storybook/addon-essentials": "^8.3.6",
