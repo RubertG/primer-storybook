@@ -1,7 +1,7 @@
 {
   "name": "rg-custom-components",
   "private": false,
-  "version": "0.0.1-rc3",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -33,11 +33,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-
   "engines": {
     "node": ">=16.0.0"
   },
-
   "scripts": {
     "dev": "npm run storybook",
     "build": "npm run clean && tsc -b && npm run copyfiles",
