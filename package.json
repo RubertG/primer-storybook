@@ -1,11 +1,17 @@
 {
   "name": "rg-custom-components",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
-
   "keywords": [
-    "react", "reactjs", "storybook", "ui", "components", "typescript", "dev", "rubert"
+    "react",
+    "reactjs",
+    "storybook",
+    "ui",
+    "components",
+    "typescript",
+    "dev",
+    "rubert"
   ],
   "license": "MIT",
   "homepage": "https://671bc310e7db9857e352ca8e-swpcduxgoj.chromatic.com/",
@@ -25,21 +31,18 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-
   "scripts": {
     "dev": "npm run storybook",
-    "build": "tsc -b",
+    "build": "npm run clean && tsc -b && npm run copyfiles",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_f80ab9050ca33c6"
-  },
-  "dependencies": {
+    "chromatic": "npx chromatic --project-token=chpt_f80ab9050ca33c6",
+    "clean": "rimraf dist",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
   },
   "devDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "@chromatic-com/storybook": "^1.9.0",
     "@eslint/js": "^9.13.0",
     "@storybook/addon-essentials": "^8.3.6",
@@ -54,11 +57,15 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "chromatic": "^11.16.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.13",
     "eslint-plugin-storybook": "^0.10.1",
     "globals": "^15.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
     "storybook": "^8.3.6",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
